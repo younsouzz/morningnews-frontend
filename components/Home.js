@@ -14,7 +14,7 @@ function Home() {
   const [topArticle, setTopArticle] = useState({});
 
   useEffect(() => {
-    fetch("http://morningnews-backend-zeta.vercel.app/articles")
+    fetch("https://morningnews-backend-zeta.vercel.app/articles")
       .then((response) => response.json())
       .then((data) => {
         setTopArticle(data.articles[0]);
