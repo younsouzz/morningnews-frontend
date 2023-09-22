@@ -14,6 +14,7 @@ function Home() {
   const [topArticle, setTopArticle] = useState({});
 
   useEffect(() => {
+    console.log('https://morningnews-backend-pied.vercel.app/articles')
     fetch(`${process.env.BACKEND_URL}/articles`)
       .then((response) => response.json())
       .then((data) => {

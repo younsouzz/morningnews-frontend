@@ -19,7 +19,7 @@ function Article(props) {
       return;
     }
 
-fetch(`${process.env.BACKEND_URL}/users/canBookmark/${user.token}`)
+fetch('https://morningnews-backend-pied.vercel.app/users/canBookmark/${user.token}')
   .then((response) => response.json())
   .then((data) => {
     if (data.result && data.canBookmark) {
