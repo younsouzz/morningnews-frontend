@@ -30,7 +30,7 @@ function Header() {
   }, []);
 
   const handleRegister = () => {
-    fetch("http://localhost:3000/users/signup", {
+    fetch(`${process.env.BACKEND_URL}/users/signup`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -50,7 +50,7 @@ function Header() {
   };
 
   const handleConnection = () => {
-    fetch("http://localhost:3000/users/signin", {
+    fetch(`${process.env.BACKEND_URL}/users/signin`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({

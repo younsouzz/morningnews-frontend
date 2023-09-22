@@ -13,6 +13,7 @@ import { PersistGate } from 'redux-persist/integration/react';
 import storage from 'redux-persist/lib/storage';
 
 const reducers = combineReducers({ bookmarks, user, hiddenArticles })
+// console.log(process.env.BACKEND_URL)
 const persistConfig = { key: 'morningNews', storage };
 
 const store = configureStore({
